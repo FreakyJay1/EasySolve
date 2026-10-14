@@ -1,0 +1,108 @@
+/* Testimonials Section Styles */
+.testimonials .wrapper{
+    background-color: var(--muted-text);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-bg);
+}
+.testimonials .wrapper h1{
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.testimonials .wrapper h5{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.testimonials .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.testimonials .card{
+    flex: 1 1 240px;
+    max-width: 280px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--light-text);
+    border-radius: 15px;
+    padding: 60px 25px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonials .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+.testimonials .card img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--light-text);
+}
+.testimonials .card p{
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.testimonials .card h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+.testimonials .card h4{
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.testimonials .card i{
+    font-size: 28px;
+    color: var(--primary-blue);
+    opacity: 0.4;
+    margin-top: auto;
+}
+
+/* Tablet: two cards per row */
+@media (max-width: 1000px){
+    .testimonials .card{
+        flex: 1 1 calc(50% - 20px);
+        max-width: 340px;
+    }
+}
+
+/* Mobile: one card per row */
+@media (max-width: 600px){
+    .testimonials .wrapper{
+        padding: 40px 20px;
+    }
+    .testimonials .wrapper h1{
+        font-size: 28px;
+    }
+    .testimonials .wrapper h5{
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+    .testimonials .card{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
