@@ -1,0 +1,247 @@
+/* Services Section Styles */
+.services{
+    background-color: var(--light-text);
+    padding: 70px 40px;
+}
+.services .service-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services .service-box h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--dark-bg);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.services .service-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+.services .service-card{
+    flex: 1 1 220px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 15px;
+    background-color: var(--dark-bg);
+    z-index: 1;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 0.6s ease both;
+}
+.services .service-card:nth-child(2){ animation-delay: 0.15s; }
+.services .service-card:nth-child(3){ animation-delay: 0.3s; }
+.services .service-card:nth-child(4){ animation-delay: 0.45s; }
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* blue layer that slides up on hover */
+.services .service-card::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-blue);
+    z-index: -1;
+    transition: top 0.4s ease;
+}
+.services .service-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(56, 130, 246, 0.35);
+}
+.services .service-card:hover::before{
+    top: 0;
+}
+.services .service-card .icon{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    margin-bottom: 25px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+.services .service-card .icon i{
+    font-size: 32px;
+    color: var(--light-text);
+    transition: color 0.4s ease;
+}
+.services .service-card:hover .icon{
+    background-color: var(--light-text);
+    transform: rotateY(360deg);
+}
+.services .service-card:hover .icon i{
+    color: var(--primary-blue);
+}
+.services .service-card h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+.services .service-card p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--muted-text);
+}
+
+/* Services: skip animations for people who prefer less motion */
+@media (prefers-reduced-motion: reduce){
+    .services .service-card,
+    .services .service-card .icon{
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Services: tablet and small laptops */
+@media (max-width: 1100px){
+    .services .service-card{
+        flex: 1 1 calc(50% - 25px);
+    }
+}
+
+/* Services: mobile */
+@media (max-width: 600px){
+    .services{
+        padding: 50px 20px;
+    }
+    .services .service-box h2{
+        font-size: 28px;
+    }
+    .services .service-card{
+        flex: 1 1 100%;
+    }
+}
+
+/* Testimonials Section Styles */
+.testimonials .wrapper{
+    background-color: var(--dark-bg);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-text);
+}
+.testimonials .wrapper h1{
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.testimonials .wrapper h5{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.testimonials .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.testimonials .card{
+    flex: 1 1 240px;
+    max-width: 280px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--dark-bg);
+    background-color: var(--light-text);
+    border-radius: 15px;
+    padding: 60px 25px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonials .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+.testimonials .card img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--light-text);
+}
+.testimonials .card p{
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.testimonials .card h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+.testimonials .card h4{
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.testimonials .card i{
+    font-size: 28px;
+    color: var(--primary-blue);
+    opacity: 0.4;
+    margin-top: auto;
+}
+
+/* Tablet: two cards per row */
+@media (max-width: 1100px){
+    .testimonials .card{
+        flex: 1 1 calc(50% - 20px);
+        max-width: 340px;
+    }
+}
+
+/* Mobile: one card per row */
+@media (max-width: 600px){
+    .testimonials .wrapper{
+        padding: 40px 20px;
+    }
+    .testimonials .wrapper h1{
+        font-size: 28px;
+    }
+    .testimonials .wrapper h5{
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+    .testimonials .card{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
