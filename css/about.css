@@ -11,31 +11,61 @@
 }
 .whoWeAre{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--light-text);
     padding: 70px 80px;
     gap: 40px;
 }
 .whoWeAre-content{
-    flex: 1;
+    flex: 1 1 50%;
     max-width: 600px;
+    align-self: flex-start;
+}
+.whoWeAre-content > p:last-of-type{
+    margin-top: 10px;
+}
+
+.whoWeAre .button{
+    margin-top: 8px;
+}
+.whoWeAre > picture{
+    flex: 1 1 35%;
+    min-width: 0;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.whoWeAre > picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .whoWeAre .stats-container{
     display: flex;
-    flex: 0 0 300px;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 0;
-    padding-top: 0;
+    flex: 1 0 100%;
+    flex-direction: row;
+    width: 100%;
 }
 .whoWeAre .stats{
-    flex: 1 1 auto;
+    flex: 1 1 180px;
+    padding: 2px;
+    background-color:var(--light-text);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.2);
+    transition: transform 0.2s ease,box-shadow 0.2s ease;
+}
+.whoWeAre .stats:hover{
+    transform: translate(-6px);
+    box-shadow: 0 10px var(--qoute-bg);
 }
 .whoWeAre h1{
     color: var(--dark-bg);
     font-size: 36px;
     font-weight: 700;
+    margin-top: 30px;
 }
 .whoWeAre h5{
     color: var(--dark-bg);
@@ -72,7 +102,6 @@
 .site-body{
     min-height: 100vh;
     height: auto;
-    padding-bottom: 96px;
 }
 
 .stats-container{
@@ -95,14 +124,17 @@
     color: var(--dark-bg);
 }
 .whoWeAre .stats {
-    flex: 1 1 auto;
+    flex: 1 1 180px;
     color: var(--dark-bg);
 }
 
 .whoWeAre .stats-container .stats span{
      border-bottom: 1px solid #ddd;
 }
-
+/* Let team descriptions fill spare card space so names and roles line up. */
+.ourTeam .card p{
+    flex-grow: 1;
+}
 /* Tablet: stack the hero and About section content for more reading space. */
 @media (max-width: 768px) {
     .site-header {
@@ -123,13 +155,23 @@
     }
 
     .whoWeAre {
+        padding: 48px 24px;
         flex-direction: column;
         align-items: stretch;
-        padding: 48px 24px;
+    }
+
+    .whoWeAre-content,
+    .whoWeAre > picture {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .whoWeAre > picture {
+        max-height: 360px;
     }
 
     .whoWeAre .stats-container {
-        flex-basis: auto;
+        flex: 0 1 auto;
         width: 100%;
     }
 }
@@ -166,4 +208,3 @@
         font-size: 16px;
     }
 }
-
