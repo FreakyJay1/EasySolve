@@ -137,7 +137,8 @@
 }
 
 /* Testimonials Section Styles */
-.testimonials .wrapper{
+.testimonials .wrapper,
+.ourTeam .wrapper{
     background-color: var(--dark-bg);
     padding: 60px 40px;
     display: flex;
@@ -145,19 +146,22 @@
     align-items: center;
     color: var(--light-text);
 }
-.testimonials .wrapper h1{
+.testimonials .wrapper h1,
+.ourTeam .wrapper h1{
     font-size: 36px;
     font-weight: 500;
     text-align: center;
     margin-bottom: 10px;
 }
-.testimonials .wrapper h5{
+.testimonials .wrapper h5,
+.ourTeam .wrapper h5{
     font-size: 20px;
     font-weight: 300;
     text-align: center;
     margin-bottom: 70px;
 }
-.testimonials .cards{
+.testimonials .cards,
+.ourTeam .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -165,7 +169,8 @@
     width: 100%;
     max-width: 1200px;
 }
-.testimonials .card{
+.testimonials .card,
+.ourTeam .card{
     flex: 1 1 240px;
     max-width: 280px;
     position: relative;
@@ -180,11 +185,13 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.testimonials .card:hover{
+.testimonials .card:hover,
+.ourTeam .card:hover{
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
-.testimonials .card img{
+.testimonials .card img,
+.ourTeam .card img{
     width: 90px;
     height: 90px;
     object-fit: cover;
@@ -196,24 +203,29 @@
     transform: translateX(-50%);
     background-color: var(--light-text);
 }
-.testimonials .card p{
+.testimonials .card p,
+.ourTeam .card p{
     font-size: 14px;
     font-weight: 300;
     font-style: italic;
     line-height: 1.6;
     margin-bottom: 20px;
 }
-.testimonials .card h2{
+
+.testimonials .card h2,
+.ourTeam .card h2{
     font-size: 18px;
     font-weight: 700;
     color: var(--primary-blue);
 }
-.testimonials .card h4{
+.testimonials .card h4,
+.ourTeam .card h4{
     font-size: 13px;
     font-weight: 400;
     margin-bottom: 15px;
 }
-.testimonials .card i{
+.testimonials .card i,
+.ourTeam .card i{
     font-size: 28px;
     color: var(--primary-blue);
     opacity: 0.4;
@@ -222,7 +234,8 @@
 
 /* Tablet: two cards per row */
 @media (max-width: 1100px){
-    .testimonials .card{
+    .testimonials .card,
+    .ourTeam .card{
         flex: 1 1 calc(50% - 20px);
         max-width: 340px;
     }
@@ -230,17 +243,21 @@
 
 /* Mobile: one card per row */
 @media (max-width: 600px){
-    .testimonials .wrapper{
+    .testimonials .wrapper,
+    .ourTeam .wrapper{
         padding: 40px 20px;
     }
-    .testimonials .wrapper h1{
+    .testimonials .wrapper h1,
+    .ourTeam .wrapper h1{
         font-size: 28px;
     }
-    .testimonials .wrapper h5{
+    .testimonials .wrapper h5,
+    .ourTeam .wrapper h5{
         font-size: 16px;
         margin-bottom: 60px;
     }
-    .testimonials .card{
+    .testimonials .card,
+    .ourTeam .card{
         flex: 1 1 100%;
         max-width: 100%;
     }

@@ -1,0 +1,210 @@
+.hero{
+    display:flex;
+    justify-content:space-between;
+    padding: 0 100px;
+    min-height: calc(100vh - 60px);
+    align-items: center;
+    background-color: var(--dark-bg);
+    background-image:linear-gradient(to right,#1F2937 0%,rgba(31,41,55,0.9) 40%, transparent 80%), url("../assets/hero.webp");
+    /* background-position: right;
+    background-repeat: no-repeat; */
+}
+.whoWeAre{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--light-text);
+    padding: 70px 80px;
+    gap: 40px;
+}
+.whoWeAre-content{
+    flex: 1 1 50%;
+    max-width: 600px;
+    align-self: flex-start;
+}
+.whoWeAre-content > p:last-of-type{
+    margin-top: 10px;
+}
+
+.whoWeAre .button{
+    margin-top: 8px;
+}
+.whoWeAre > picture{
+    flex: 1 1 35%;
+    min-width: 0;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.whoWeAre > picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.whoWeAre .stats-container{
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: row;
+    width: 100%;
+}
+.whoWeAre .stats{
+    flex: 1 1 180px;
+    padding: 2px;
+    background-color:var(--light-text);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.2);
+    transition: transform 0.2s ease,box-shadow 0.2s ease;
+}
+.whoWeAre .stats:hover{
+    transform: translate(-6px);
+    box-shadow: 0 10px var(--qoute-bg);
+}
+.whoWeAre h1{
+    color: var(--dark-bg);
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.whoWeAre h5{
+    color: var(--dark-bg);
+}
+.hero picture{
+    flex: 1 1 45%;
+    height: 300px;
+}
+.hero .content{
+    flex: 1 1 55%;
+    min-width: 0;
+}
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content p{
+   color: var(--muted-text);
+   font-size: 18px;
+   margin-bottom: 20px;
+   max-width: 1000px;
+}
+
+.content h1{
+    color: var(--light-text);
+    font-size: 48px;
+}
+
+.highlight{
+    color:var(--primary-blue) ;
+}
+
+.site-body{
+    min-height: 100vh;
+    height: auto;
+}
+
+.stats-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 25px;
+    background-color: var(--qoute-bg);
+}
+.stats{
+    text-align: center;
+    color: var(--light-text);   
+}
+.stats h3{
+    color: var(--primary-blue);
+    padding: 14px;
+}
+.whoWeAre .stats-container .stats span{
+    color: var(--dark-bg);
+}
+.whoWeAre .stats {
+    flex: 1 1 180px;
+    color: var(--dark-bg);
+}
+
+.whoWeAre .stats-container .stats span{
+     border-bottom: 1px solid #ddd;
+}
+/* Let team descriptions fill spare card space so names and roles line up. */
+.ourTeam .card p{
+    flex-grow: 1;
+}
+/* Tablet: stack the hero and About section content for more reading space. */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0 24px;
+    }
+
+    .hero {
+        min-height: 0;
+        flex-direction: column;
+        gap: 32px;
+        padding: 48px 24px;
+    }
+
+    .hero .content,
+    .hero picture {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .whoWeAre {
+        padding: 48px 24px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .whoWeAre-content,
+    .whoWeAre > picture {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .whoWeAre > picture {
+        max-height: 360px;
+    }
+
+    .whoWeAre .stats-container {
+        flex: 0 1 auto;
+        width: 100%;
+    }
+}
+
+/* Mobile: tighten spacing and allow the cards to use the full narrow column. */
+@media (max-width: 375px) {
+    .site-header {
+        height: auto;
+        min-height: 60px;
+        padding: 12px 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav.links {
+        gap: 14px;
+    }
+
+    nav.links a {
+        font-size: 16px;
+    }
+
+    .hero,
+    .whoWeAre {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
