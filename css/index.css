@@ -322,7 +322,7 @@ footer p{
     }
 
     .quote {
-        padding: 30px 20px;
+        padding: 30px 50px;
     }
 
     .quote .quoteHolder p {
@@ -460,8 +460,9 @@ footer p{
     .signup .signUpBox .text h3 {
         font-size: 20px;
     }
-    .signup .signUpBox .text p {
-        font-size: 10px;
+        .signup .signUpBox .text p {
+        padding-top: 10px;
+        font-size: 12px;
     }
     footer {
     padding: 50px 50px;
