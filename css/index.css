@@ -394,7 +394,7 @@ footer p{
     font-size: 18px;
 
     }
-    nav.links{
+    header nav.links{
         position: absolute;
         top: 60px;
         left: 0;
@@ -423,7 +423,7 @@ footer p{
     .nav-toggle:checked + .nav-toggle-label span:last-child{
         transform: translateY(-8px) rotate(-45deg);
     }
-    nav.links a{
+    header nav.links a{
         padding: 14px 0;
         font-size: 16px;
         border-top: 1px solid rgba(229, 231, 235, 0.15);
@@ -472,7 +472,7 @@ footer p{
 
     }
     footer .firstPart .footerLinks a {
-        font-size: 13px;
+    font-size: 13px;
     }
     footer .firstPart .footerLinks {
     gap: 10px;
