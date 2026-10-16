@@ -5,9 +5,6 @@
     min-height: calc(100vh - 60px);
     align-items: center;
     background-color: var(--dark-bg);
-    background-image:linear-gradient(to right,#1F2937 0%,rgba(31,41,55,0.9) 40%, transparent 80%), url("../assets/hero.webp");
-    /* background-position: right;
-    background-repeat: no-repeat; */
 }
 .whoWeAre{
     display: flex;
