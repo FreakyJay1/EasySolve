@@ -88,7 +88,8 @@ nav.links a{
 /* Info Section Styles */
 .info{
     background-color: var(--light-bg);
-    padding: 50px 100px;
+    padding: 50px 100px 150px 100px;
+    height: auto;
 }
 .info>h1{
     font-size: 36px;
@@ -99,7 +100,7 @@ nav.links a{
 .info .container{
     width:100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
 }
 .info .container .card{
@@ -108,19 +109,49 @@ nav.links a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
+    z-index: 10;
 }
 .info .container .card .border{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border: 3px solid var(--primary-blue);
     border-radius: 5px;
+    z-index: 10;
+    background:white;
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.128);
 }
-.info .container .card p{
+.info .container .card .border picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info .container .card .border picture img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.info .container .card .content{
     font-size: 13px;
     width: 150px;
     color: var(--dark-bg);
     text-align: center;
     padding: 10px 0;
+    padding-bottom: 20px;
+    margin-top: -140px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+.info .container .card .content h3{
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.info .container .card:hover .content{
+    transform: translateY(140px);
 }
 /*quote styles*/
 .quote{
@@ -130,6 +161,7 @@ nav.links a{
 .quote .quoteHolder{
   display: flex;
   flex-direction: column;
+
 }
 .quote .quoteHolder p{
     font-size: 36px;
@@ -158,6 +190,8 @@ nav.links a{
     align-items:center;
     padding: 50px 100px;
     border-radius: 5px;
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.192);
+
 
 }
 .signup .signUpBox .text{
@@ -177,7 +211,7 @@ nav.links a{
 .signup .signUpBox .button{
     border: 2px solid var(--light-text);
 }
-/*footer stylea*/
+/*footer style*/
 footer{
     background-color: var(--dark-bg);
     padding: 50px 100px;
@@ -188,4 +222,127 @@ footer p{
     color: var(--muted-text);
     text-align: center;
     
+}
+/*responsive styles*/
+/*tablet*/
+@media (max-width: 1100px) {
+    .hero .content h1{
+        font-size: 34px;
+    }
+    .hero .content p{
+        font-size: 14px;
+    } 
+    .info{
+    padding: 50px 100px 50px 100px;
+}
+    .info .container {
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+
+    .info .container .card {
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 150px;
+    }
+
+    .quote {
+        padding: 30px 20px;
+    }
+
+    .quote .quoteHolder p {
+        font-size: 24px;
+    }
+    .signup {
+    padding: 50px 100px;
+}
+
+    .signup .signUpBox {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .signup .signUpBox .text {
+        width: 100%;
+        text-align: center;
+    }
+    .signup .signUpBox .button{
+        margin-top: 20px;
+    }
+
+    footer .firstPart {
+       
+        align-items: center;
+    }
+
+ 
+}
+/* Services: mobile */
+@media (max-width: 600px){
+    header{
+        padding: 0 50px;
+    }
+    .logo a{
+    font-size: 18px;
+
+    }
+    nav.links{
+    gap: 20px;
+    }
+    nav.links a{
+        font-size: 13px;
+    }
+    .hero{
+        flex-direction: column;
+        padding: 50px 50px;
+        height: auto;
+    }
+    .hero .content , .hero picture{
+        width: 100%;
+    }
+    .hero picture{
+        height: 200px;
+        margin-top: 50px;
+    }
+    .hero .content h1{
+        font-size: 24px;
+    }
+    .hero .content p{
+        font-size: 14px;
+    }
+
+    .info>h1 {
+    font-size: 25px;
+    }
+   .info .container {
+    justify-content: center;
+}
+    .signup {
+        padding: 50px 50px;
+    }
+        
+    .signup .signUpBox .text h3 {
+        font-size: 20px;
+    }
+    .signup .signUpBox .text p {
+        font-size: 10px;
+    }
+    footer {
+    padding: 50px 50px;
+    }
+    footer .firstPart .logoSide .links a {
+    font-size: 20px;
+
+    }
+    footer .firstPart .footerLinks a {
+        font-size: 13px;
+    }
+    footer .firstPart .footerLinks {
+    gap: 10px;
+
+    }
+    footer p {
+
+    text-align: center;
+}
 }
