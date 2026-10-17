@@ -96,11 +96,6 @@
     color:var(--primary-blue) ;
 }
 
-.site-body{
-    min-height: 100vh;
-    height: auto;
-}
-
 .stats-container{
     display: flex;
     flex-wrap: wrap;
@@ -134,10 +129,6 @@
 }
 /* Tablet: stack the hero and About section content for more reading space. */
 @media (max-width: 768px) {
-    .site-header {
-        padding: 0 24px;
-    }
-
     .hero {
         min-height: 0;
         flex-direction: column;
@@ -175,14 +166,6 @@
 
 /* Mobile: tighten spacing and allow the cards to use the full narrow column. */
 @media (max-width: 375px) {
-    .site-header {
-        height: auto;
-        min-height: 60px;
-        padding: 12px 16px;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
     nav.links {
         gap: 14px;
     }

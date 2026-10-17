@@ -4,6 +4,8 @@ EasySolve is a small website we built for a made-up web company as a course proj
 
 The company pitch is simple: web design, web development, hosting and app development for small businesses.
 
+Live site: https://freakyjay1.github.io/EasySolve/
+
 ## Pages
 
 - `index.html` - home page with the hero, the main services and a call to action
