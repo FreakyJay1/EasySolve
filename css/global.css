@@ -52,6 +52,82 @@ nav.links a{
 .nav-toggle-label{
     display: none;
 }
+/* hero style */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    padding: 0 100px;
+    height: calc(90vh - 60px);
+    align-items:center;
+    background-color: var(--dark-bg);
+}
+.hero .content , .hero picture{
+    width: 50%;
+    border-radius: 10px;
+
+}
+.hero picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+.hero .content h1{
+    font-size: 48px;
+    color: var(--light-text);
+    font-weight: extra-bold;
+    text-align: left;
+    width: 70%;
+}
+.hero .content p{
+    font-size: 18px;
+    color: var(--muted-text);
+    padding: 20px 0;
+}   
+.hero .content .button , .signup .signUpBox .button{
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 5px;
+    width: 160px;
+    height: 50px;
+}
+
+.hero .content .button span,  .signup .signUpBox .button span{
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 10px;
+    opacity: 1;
+    transition: max-width 0.25s ease-in-out, opacity 0.2s ease-in-out, padding-right 0.25s ease-in-out;
+}
+.hero .content .button i, .signup .signUpBox .button i{
+    transition: transform 0.2s ease-in-out;
+}
+.hero .content .button:hover i, .signup .signUpBox .button:hover i{
+    transform: scale(1.2);
+}
+.hero .content .button:hover span, .signup .signUpBox .button:hover span{
+    max-width: 0;
+    padding-right: 0;
+    opacity: 0;
+}
+.hero picture{
+    height: 300px;
+    background-color: var(--quote-bg);
+    margin-left: 20px;
+}
+
 
 /* Button */
 .button{
