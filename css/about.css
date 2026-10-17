@@ -1,10 +1,5 @@
 .hero{
-    display:flex;
-    justify-content:space-between;
-    padding: 0 100px;
     min-height: calc(100vh - 60px);
-    align-items: center;
-    background-color: var(--dark-bg);
 }
 .whoWeAre{
     display: flex;
@@ -75,21 +70,10 @@
     flex: 1 1 55%;
     min-width: 0;
 }
-.hero picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 .content p{
-   color: var(--muted-text);
-   font-size: 18px;
    margin-bottom: 20px;
    max-width: 1000px;
-}
-
-.content h1{
-    color: var(--light-text);
-    font-size: 48px;
 }
 
 .highlight{
