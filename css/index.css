@@ -1,55 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-:root {
-    --dark-bg: #1F2937;
-    --light-text: #F9FAF8;
-    --muted-text: #E5E7EB;
-    --primary-blue: #3882F6;
-    --quote-bg: #E5E7EB;
-}
-
-*{
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-body{
-    width: 100%;
-    height:auto;
-}
-/* Header Styles */
-header{
-    display: flex;
-    width: 100%;
-    height: 60px;
-    padding: 0 100px;
-    justify-content: space-between;
-    align-items:center;
-    background-color: var(--dark-bg);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}   
-
-.logo a{
-    color: var(--light-text);
-    font-size: 24px;
-    font-weight: bold;
-}
-nav.links{
-    display: flex;
-    gap: 30px;
-}
-nav.links a{
-    color: var(--muted-text);
-    font-size: 18px;
-}
-.nav-toggle,
-.nav-toggle-label{
-    display: none;
-}
 /* hero style */
 .hero{
     display:flex;
@@ -86,6 +34,12 @@ nav.links a{
 }   
 .hero .content .button , .signup .signUpBox .button{
     background-color: var(--primary-blue);
+    color: var(--light-text);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -95,16 +49,7 @@ nav.links a{
     height: 50px;
 }
 
-.hero .content .button a, .signup .signUpBox .button a{
-    color: var(--light-text);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.hero .content .button a span,  .signup .signUpBox .button a span{
+.hero .content .button span,  .signup .signUpBox .button span{
     max-width: 100px;
     overflow: hidden;
     white-space: nowrap;
@@ -112,13 +57,13 @@ nav.links a{
     opacity: 1;
     transition: max-width 0.25s ease-in-out, opacity 0.2s ease-in-out, padding-right 0.25s ease-in-out;
 }
-.hero .content .button a i, .signup .signUpBox .button a i{
+.hero .content .button i, .signup .signUpBox .button i{
     transition: transform 0.2s ease-in-out;
 }
-.hero .content .button:hover a i, .signup .signUpBox .button:hover a i{
+.hero .content .button:hover i, .signup .signUpBox .button:hover i{
     transform: scale(1.2);
 }
-.hero .content .button:hover a span, .signup .signUpBox .button:hover a span{
+.hero .content .button:hover span, .signup .signUpBox .button:hover span{
     max-width: 0;
     padding-right: 0;
     opacity: 0;
@@ -254,51 +199,6 @@ nav.links a{
 .signup .signUpBox .button{
     border: 2px solid var(--light-text);
 }
-/*footer style*/
-footer{
-    background-color: var(--dark-bg);
-    padding: 50px 100px;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
-}
-footer .firstPart{
-    display:flex;
-    justify-content:space-between;
-}
-footer .firstPart .logoSide{
-    width: 50%;
-    text-align: left;
-}
-footer .firstPart .logoSide .links{
-    display:flex;
-    gap: 20px;
-    padding-top: 15px;
-}
-footer .firstPart .logoSide .links a{
-   font-size: 24px;
-   color: var(--primary-blue);
-}
-footer .firstPart .footerLinks{
-    width: 50%;
-    display: flex;
-    gap: 30px;
-    justify-content: right;
-}
-footer .firstPart .footerLinks a{
-    color: var(--muted-text);
-    font-size: 18px;
-}
-footer .line{
-    margin: 30px 0;
-    background-color: var(--muted-text);
-    width: 100%;
-    height: 1px;
-}
-footer p{
-    font-size: 12px;
-    color: var(--muted-text);
-    text-align: right;
-    
-}
 /*responsive styles*/
 /*tablet*/
 @media (max-width: 1100px) {
@@ -346,88 +246,9 @@ footer p{
         margin-top: 20px;
     }
 
-    footer .firstPart {
-       
-        align-items: center;
-    }
-
- 
 }
 /* Services: mobile */
 @media (max-width: 600px){
-    header{
-        padding: 0 24px;
-    }
-    .nav-toggle{
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-    }
-    .nav-toggle-label{
-        display: flex;
-        width: 32px;
-        height: 32px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 6px;
-        cursor: pointer;
-    }
-    .nav-toggle-label span{
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: var(--light-text);
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    .nav-toggle:focus-visible + .nav-toggle-label{
-        outline: 2px solid var(--light-text);
-        outline-offset: 4px;
-    }
-    .logo a{
-    font-size: 18px;
-
-    }
-    header nav.links{
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        padding: 0 24px;
-        background-color: var(--dark-bg);
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-8px);
-        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-    }
-    .nav-toggle:checked ~ nav.links{
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .nav-toggle:checked + .nav-toggle-label span:first-child{
-        transform: translateY(8px) rotate(45deg);
-    }
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(2){
-        opacity: 0;
-    }
-    .nav-toggle:checked + .nav-toggle-label span:last-child{
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    header nav.links a{
-        padding: 14px 0;
-        font-size: 16px;
-        border-top: 1px solid rgba(229, 231, 235, 0.15);
-    }
     .hero{
         flex-direction: column;
         padding: 50px 50px;
@@ -464,22 +285,4 @@ footer p{
         padding-top: 10px;
         font-size: 12px;
     }
-    footer {
-    padding: 50px 50px;
-    }
-    footer .firstPart .logoSide .links a {
-    font-size: 20px;
-
-    }
-    footer .firstPart .footerLinks a {
-    font-size: 13px;
-    }
-    footer .firstPart .footerLinks {
-    gap: 10px;
-
-    }
-    footer p {
-
-    text-align: center;
-}
 }
