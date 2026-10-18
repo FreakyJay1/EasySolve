@@ -57,7 +57,7 @@ nav.links a{
     display:flex;
     justify-content:space-between;
     padding: 0 100px;
-    height: calc(90vh - 60px);
+    height: calc(80vh - 60px);
     align-items:center;
     background-color: var(--dark-bg);
 }
@@ -125,7 +125,7 @@ nav.links a{
 .hero picture{
     height: 300px;
     background-color: var(--quote-bg);
-    margin-left: 20px;
+    margin-left: 70px;
 }
 
 
