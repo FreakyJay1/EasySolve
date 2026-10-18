@@ -23,6 +23,7 @@
     justify-content: center;
     gap: 25px;
     width: 100%;
+    list-style: none;
 }
 .services .service-card{
     flex: 1 1 220px;
@@ -210,6 +211,9 @@
     font-style: italic;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+.testimonials .card blockquote{
+    width: 100%;
 }
 
 .testimonials .card h2,
